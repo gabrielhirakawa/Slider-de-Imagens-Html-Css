@@ -1,0 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+
+}
+
+#container{
+	width: 400px;
+	height: auto;
+	margin: 150px auto;
+
+}
+
+
+.principal{
+	width: 400px;
+	height: 400px;
+	border: solid 3px #000;
+	overflow: hidden;
+}
+
+.slide{
+	display: flex;
+	width: 400%;
+	transition: all .8s;
+
+}
+
+label img{
+	width: 100px;
+	cursor: pointer;
+	float: left;
+	opacity: 0.6;
+	transition: all .4s;
+}
+
+#foto2:checked ~ .principal .slide{
+	margin-left: -100%;
+
+}
+#foto3:checked ~ .principal .slide{
+	margin-left: -200%;
+
+}
+
+#foto4:checked ~ .principal .slide{
+	margin-left: -300%;
+
+}
+
+input[name="grupo"]{
+	display: none;
+}
+
+input[name="grupo"]:checked + label img{
+	opacity: 0.9;
+}
+
+body{
+	background-color: #aaa;
+}
